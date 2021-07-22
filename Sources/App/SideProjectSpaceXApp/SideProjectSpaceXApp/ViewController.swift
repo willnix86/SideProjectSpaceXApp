@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NetworkingService
 
 class ViewController: UIViewController {
 
@@ -15,7 +16,23 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .systemPink
         
-        standardGetUrlRequestWithJsonAnswer()
+        //standardGetUrlRequestWithJsonAnswer()
+        
+        networkingServiceSampleRequest()
+    }
+    
+    func networkingServiceSampleRequest() {
+        // Create URL
+        let url = URL(string: "https://api.spotify.com/v1")
+        guard let requestUrl = url else { fatalError() }
+        let client = URLSessionHTTPClient(session: URLSession.shared)
+        let task = client.makeRequest(toURL: requestUrl.appendingPathComponent("browse/new-releases"), withHttpMethod: .get) { [weak self] result in
+                guard self != nil else { return }
+                
+            let result: Swift.Result<AlbumModel, NetworkingServiceError> = GenericDecoder.decodeResult(result: result)
+            print(result)
+        }
+        print(task)
     }
 
 
@@ -68,7 +85,7 @@ class ViewController: UIViewController {
     }
 }
 
-public struct AlbumModel: Codable {
+public struct AlbumModel: DTO {
     
     public var href: String
 
