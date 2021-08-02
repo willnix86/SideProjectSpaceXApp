@@ -16,9 +16,9 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .systemPink
         
-        //standardGetUrlRequestWithJsonAnswer()
+        standardGetUrlRequestWithJsonAnswer()
         
-        networkingServiceSampleRequest()
+        //networkingServiceSampleRequest()
     }
     
     func networkingServiceSampleRequest() {
@@ -38,14 +38,20 @@ class ViewController: UIViewController {
 
     func standardGetUrlRequestWithJsonAnswer() {
         // Create URL
-        let url = URL(string: "https://api.spotify.com/v1")
+        let url = URL(string: "https://accounts.spotify.com/api/token")
         guard let requestUrl = url else { fatalError() }
         // Create URL Request
         var request = URLRequest(url: requestUrl)
         // Specify HTTP Method to use
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
         // Set HTTP Request Header
-        request.setValue("Bearer BQD8NtKU2MjsTOqup1RyScIvlmZoP_x53ZGabiRSHBGqvPIkRxE7dIU8IbUhsmeZPUkec8boXLr_gst5L-o", forHTTPHeaderField: "Authorization")
+        request.setValue("Basic ZDY3MGE1OTlmZGM2NGI1ZjkyMGY4MmI0NDUwYTlhNGU6NThkZDE3NmQ4YmJhNGE3YjkzNTA4NGMwNmU3ZDNlYTE=", forHTTPHeaderField: "Authorization")
+        
+        // HTTP Request Parameters which will be sent in HTTP Request Body
+        let postString = "grant_type=client_credentials";
+        // Set HTTP Request Body
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        
         // Send HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
