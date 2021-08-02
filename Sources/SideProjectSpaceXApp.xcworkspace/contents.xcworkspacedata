@@ -7,6 +7,9 @@
    <Group
       location = "group:Modules"
       name = "Modules">
+      <FileRef
+         location = "group:SpaceXApiModule/SpaceXApiModule.xcodeproj">
+      </FileRef>
       <Group
          location = "group:NetworkingService"
          name = "NetworkingService">

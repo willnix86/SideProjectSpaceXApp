@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24198F4426B857E300CF6759 /* SpaceXApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4326B857E300CF6759 /* SpaceXApiModule.framework */; };
+		24198F4526B857E300CF6759 /* SpaceXApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4326B857E300CF6759 /* SpaceXApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		246E9F0A26A7529600BB5E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9F0926A7529600BB5E47 /* AppDelegate.swift */; };
 		246E9F0C26A7529600BB5E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9F0B26A7529600BB5E47 /* SceneDelegate.swift */; };
 		246E9F0E26A7529600BB5E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9F0D26A7529600BB5E47 /* ViewController.swift */; };
@@ -43,6 +45,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2492F71726A985DE0063D504 /* NetworkingService.framework in Embed Frameworks */,
+				24198F4526B857E300CF6759 /* SpaceXApiModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24198F4326B857E300CF6759 /* SpaceXApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceXApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E9F0626A7529600BB5E47 /* SideProjectSpaceXApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideProjectSpaceXApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E9F0926A7529600BB5E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246E9F0B26A7529600BB5E47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2492F71626A985DE0063D504 /* NetworkingService.framework in Frameworks */,
+				24198F4426B857E300CF6759 /* SpaceXApiModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +152,7 @@
 		2492F71426A985DE0063D504 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24198F4326B857E300CF6759 /* SpaceXApiModule.framework */,
 				2492F71526A985DE0063D504 /* NetworkingService.framework */,
 			);
 			name = Frameworks;
