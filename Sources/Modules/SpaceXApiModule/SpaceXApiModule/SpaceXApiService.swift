@@ -32,7 +32,7 @@ public protocol SpaceXApiService {
   func getShips(completion: @escaping (Swift.Result<[Ship], ServiceError>)->Void) -> HTTPClientTask
 
   //GET https://api.spacexdata.com/v4/ships/$shipID
-  func getShip(with shipID: String, completion: @escaping (Swift.Result<Ship, ServiceError>)->Void) -> HTTPClientTask
+  func getShip(named shipID: String, completion: @escaping (Swift.Result<Ship, ServiceError>)->Void) -> HTTPClientTask
   
   
   //MARK: Rockets
@@ -41,5 +41,5 @@ public protocol SpaceXApiService {
   func getRockets(completion: @escaping (Swift.Result<[Rocket], ServiceError>)->Void) -> HTTPClientTask
   
   //GET https://api.spacexdata.com/v4/rockets/$rocketID
-  func getRocket(with rocketID: String, completion: @escaping (Swift.Result<Rocket, ServiceError>)->Void) -> HTTPClientTask
+  func getRocket(named rocketID: String, completion: @escaping (Swift.Result<Rocket, ServiceError>)->Void) -> HTTPClientTask
 }
