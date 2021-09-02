@@ -15,9 +15,11 @@
 		24198F4926B8580900CF6759 /* NetworkingService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4726B8580900CF6759 /* NetworkingService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24198F4D26B85BFE00CF6759 /* RemoteSpaceXApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F4C26B85BFE00CF6759 /* RemoteSpaceXApiService.swift */; };
 		24198F5026B8698000CF6759 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F4F26B8698000CF6759 /* Launch.swift */; };
-		24198F5226B869D400CF6759 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F5126B869D400CF6759 /* Fairings.swift */; };
-		24198F5426B869FD00CF6759 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F5326B869FD00CF6759 /* Links.swift */; };
-		24198F5626B86A9400CF6759 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F5526B86A9400CF6759 /* Core.swift */; };
+		E64964D526E0DBEE00635A94 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D426E0DBEE00635A94 /* Ship.swift */; };
+		E64964D726E0DEB100635A94 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D626E0DEB100635A94 /* Rocket.swift */; };
+		E64964D926E0E5D200635A94 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D826E0E5D200635A94 /* Fairings.swift */; };
+		E64964DB26E0E5DB00635A94 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964DA26E0E5DB00635A94 /* Core.swift */; };
+		E64964DD26E0E6F500635A94 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964DC26E0E6F500635A94 /* Links.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +57,11 @@
 		24198F4726B8580900CF6759 /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24198F4C26B85BFE00CF6759 /* RemoteSpaceXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSpaceXApiService.swift; sourceTree = "<group>"; };
 		24198F4F26B8698000CF6759 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
-		24198F5126B869D400CF6759 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
-		24198F5326B869FD00CF6759 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
-		24198F5526B86A9400CF6759 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		E64964D426E0DBEE00635A94 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		E64964D626E0DEB100635A94 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		E64964D826E0E5D200635A94 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
+		E64964DA26E0E5DB00635A94 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		E64964DC26E0E6F500635A94 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				24198F4F26B8698000CF6759 /* Launch.swift */,
-				24198F5126B869D400CF6759 /* Fairings.swift */,
-				24198F5326B869FD00CF6759 /* Links.swift */,
-				24198F5526B86A9400CF6759 /* Core.swift */,
+				E64964D426E0DBEE00635A94 /* Ship.swift */,
+				E64964D626E0DEB100635A94 /* Rocket.swift */,
+				E64964D826E0E5D200635A94 /* Fairings.swift */,
+				E64964DA26E0E5DB00635A94 /* Core.swift */,
+				E64964DC26E0E6F500635A94 /* Links.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24198F5626B86A9400CF6759 /* Core.swift in Sources */,
-				24198F5426B869FD00CF6759 /* Links.swift in Sources */,
-				24198F5226B869D400CF6759 /* Fairings.swift in Sources */,
 				24198F4D26B85BFE00CF6759 /* RemoteSpaceXApiService.swift in Sources */,
 				24198F5026B8698000CF6759 /* Launch.swift in Sources */,
+				E64964D926E0E5D200635A94 /* Fairings.swift in Sources */,
+				E64964DB26E0E5DB00635A94 /* Core.swift in Sources */,
 				24198F4226B8575400CF6759 /* SpaceXApiService.swift in Sources */,
+				E64964D526E0DBEE00635A94 /* Ship.swift in Sources */,
+				E64964D726E0DEB100635A94 /* Rocket.swift in Sources */,
+				E64964DD26E0E6F500635A94 /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

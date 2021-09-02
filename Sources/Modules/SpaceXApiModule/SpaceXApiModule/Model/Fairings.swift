@@ -2,20 +2,26 @@
 //  Fairings.swift
 //  SpaceXApiModule
 //
-//  Created by Christian Slanzi on 02.08.21.
+//  Created by Will Nixon on 9/2/21.
 //
 
 import NetworkingService
 
 public struct Fairings: DTO {
-    
-    //TODO: complete the model
-    
-    public var description: String {
-        return """
-                ------------
-                //TODO: complete the description
-                ------------
-                """
-    }
+  
+  var resued: Bool
+  var recoveryAttempt: Bool
+  var recovered: Bool
+  var ships: [String]
+  
+  public var description: String {
+    return """
+              ------------
+                resued = \(resued)
+                recoveryAttempt = \(recoveryAttempt)
+                recovered = \(recovered)
+                ships = \(ships)
+              ------------
+              """
+  }
 }

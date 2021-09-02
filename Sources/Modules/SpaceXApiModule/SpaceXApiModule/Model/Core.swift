@@ -2,20 +2,32 @@
 //  Core.swift
 //  SpaceXApiModule
 //
-//  Created by Christian Slanzi on 02.08.21.
+//  Created by Will Nixon on 9/2/21.
 //
 
 import NetworkingService
 
 public struct Core: DTO {
-    
-    //TODO: complete the model
-    
-    public var description: String {
-        return """
+  
+  var core: String
+  var flight: Int
+  var block: Int
+  var gridfins: Bool
+  var legs: Bool
+  var reused: Bool
+  var landingAttempt: Bool
+  var landingSuccess: Bool
+  var landingType: String
+  var landpad: String
+  
+  public var description: String {
+    return """
                 ------------
-                //TODO: complete the description
+                core = \(core)
+                flight = \(flight)
+                landingSuccess = \(landingSuccess)
+                landingType = \(landingType)
                 ------------
                 """
-    }
+  }
 }

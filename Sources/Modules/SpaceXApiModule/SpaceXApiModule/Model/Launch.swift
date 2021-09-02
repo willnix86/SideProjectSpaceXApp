@@ -52,5 +52,4 @@ public struct Launch: DTO {
                 ------------
                 """
     }
-    
 }
