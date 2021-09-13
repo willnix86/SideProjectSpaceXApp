@@ -11,7 +11,7 @@ public struct Core: DTO {
   
   var core: String
   var flight: Int
-  var block: Int
+  var block: Int?
   var gridfins: Bool
   var legs: Bool
   var reused: Bool

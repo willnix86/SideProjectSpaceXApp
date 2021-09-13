@@ -11,18 +11,16 @@ public struct Links: DTO {
   var patch: Patch
   var reddit: Reddit
   var flickr: Flickr
-  var presskit: String
-  var webcast: String
-  var youtubeID: String
-  var article: String
-  var wikipedia: String
+  var presskit: String?
+  var webcast: String?
+  var youtubeID: String?
+  var article: String?
+  var wikipedia: String?
     
   public var description: String {
     return """
                 ------------
-                presskit = \(presskit)
-                webcast = \(webcast)
-                article = \(article)
+                Links
                 ------------
                 """
   }
@@ -47,13 +45,12 @@ public struct Patch: DTO {
 //MARK: Flickr
 public struct Flickr: DTO {
   
-  var small: String
-  var original: String
+  var small: [String]?
+  var original: [String]
   
   public var description: String {
     return """
                 ------------
-                small = \(small)
                 original = \(original)
                 ------------
                 """
@@ -65,16 +62,14 @@ public struct Reddit: DTO {
   
   var campaign: String
   var launch: String
-  var media: String
-  var recovery: String
+  var media: String?
+  var recovery: String?
   
   public var description: String {
     return """
                 ------------
                 campaign = \(campaign)
                 launch = \(launch)
-                media = \(media)
-                recovery = \(recovery)
                 ------------
                 """
   }

@@ -9,7 +9,7 @@ import NetworkingService
 
 public struct Rocket: DTO {
   
-  var id: Int
+  var id: String
   var active: Bool
   var stages: Int
   var boosters: Int
@@ -27,18 +27,15 @@ public struct Rocket: DTO {
   var engines: Engines
   var landingLegs: LandingLegs
   var wikipedia: String
-  var rocketDescription: String
-  var rocketID: String
-  var rocketName: String
-  var rocketType: String
+  var rocketId: String?
+  var rocketName: String?
+  var rocketType: String?
 
   
   public var description: String {
     return """
                 ------------
-                rocketID = \(rocketID)
-                rocketName = \(rocketName)
-                rocketType = \(rocketType)
+                Rockets
                 ------------
                 """
   }
@@ -46,14 +43,13 @@ public struct Rocket: DTO {
 
 // MARK: - Diameter
 struct Diameter: DTO {
-  var meters: Double
-  var feet: Double
+  var meters: Double?
+  var feet: Double?
   
   public var description: String {
     return """
                 ------------
-                meters = \(meters)
-                feet = \(feet)
+                Diameter
                 ------------
                 """
   }
@@ -64,8 +60,8 @@ struct Engines: DTO {
   var number: Int
   var type: String
   var version: String
-  var layout: String
-  var engineLossMax: Int
+  var layout: String?
+  var engineLossMax: Int?
   var propellant1: String
   var propellant2: String
   var thrustSeaLevel: Thrust
@@ -101,8 +97,8 @@ struct Thrust: DTO {
 struct FirstStage: DTO {
   var reusable: Bool
   var engines: Int
-  var fuelAmountTons: Int
-  var burnTimeSEC: Int
+  var fuelAmountTons: Double
+  var burnTimeSec: Int?
   var thrustSeaLevel: Thrust
   var thrustVacuum: Thrust
   
@@ -112,7 +108,6 @@ struct FirstStage: DTO {
                 engines = \(engines)
                 reusable = \(reusable)
                 fuelAmountTons = \(fuelAmountTons)
-                burnTimeSEC = \(burnTimeSEC)
                 thrustSeaLevel = \(thrustSeaLevel)
                 thrustVacuum = \(thrustVacuum)
                 ------------
@@ -123,13 +118,12 @@ struct FirstStage: DTO {
 // MARK: - LandingLegs
 struct LandingLegs: DTO {
   var number: Int
-  var material: String
+  var material: String?
   
   public var description: String {
     return """
                 ------------
                 number = \(number)
-                material = \(material)
                 ------------
                 """
   }
@@ -172,8 +166,8 @@ struct PayloadWeight: DTO {
 // MARK: - SecondStage
 struct SecondStage: DTO {
   var engines: Int
-  var fuelAmountTons: Int
-  var burnTimeSEC: Int
+  var fuelAmountTons: Double
+  var burnTimeSec: Int?
   var thrust: Thrust
   var payloads: Payloads
   
@@ -182,7 +176,6 @@ struct SecondStage: DTO {
                 ------------
                 engines = \(engines)
                 fuelAmountTons = \(fuelAmountTons)
-                burnTimeSEC = \(burnTimeSEC)
                 thrust = \(thrust)
                 payloads = \(payloads)
                 ------------
@@ -193,14 +186,13 @@ struct SecondStage: DTO {
 // MARK: - Payloads
 struct Payloads: DTO {
   var option1: String
-  var option2: String
+  var option2: String?
   var compositeFairing: CompositeFairing
   
   public var description: String {
     return """
                 ------------
                 option1 = \(option1)
-                option2 = \(option2)
                 compositeFairing = \(compositeFairing)
                 ------------
                 """
