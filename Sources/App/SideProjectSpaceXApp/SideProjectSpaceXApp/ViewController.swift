@@ -11,24 +11,26 @@ import SpaceXApiModule
 
 class ViewController: UIViewController {
     
-    private var latestLaunch: Launch?
-    private var service: SpaceXApiService = RemoteSpaceXApiService(baseURL: URL(string:"https://api.spacexdata.com/v4")!,
-                                                                   client: URLSessionHTTPClient(session: URLSession.shared))
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .systemPink
-        
-        _ = service.getLatestLaunch { result in
-            switch result {
-            case let .failure(error):
-                print(error)
-            case let .success(launch):
-                self.latestLaunch = launch
-            }
+  private var latestLaunch: Launch?
+  private var ships: [Ship]?
+  private var rockets: [Rocket]?
+  private var service: SpaceXApiService = RemoteSpaceXApiService(baseURL: URL(string:"https://api.spacexdata.com/v4")!,
+                                                                 client: URLSessionHTTPClient(session: URLSession.shared))
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    view.backgroundColor = .systemPink
+    
+    _ = service.getRockets { result in
+        switch result {
+        case let .failure(error):
+            print(error)
+        case let .success(rockets):
+            self.rockets = rockets
         }
     }
-    
+  }
+
 }
 
 

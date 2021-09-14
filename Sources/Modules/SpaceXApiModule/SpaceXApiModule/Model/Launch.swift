@@ -39,18 +39,13 @@ public struct Launch: DTO {
     var datePrecision: String
     var upcoming: Bool
     var cores: [Core]
- 
-    //TODO: complete the model
-    
+     
     public var description: String {
         return """
                 ------------
                 id = \(id)
-                fairings = \(fairings)
                 links = \(links)
-                //TODO: complete the description
                 ------------
                 """
     }
-    
 }
