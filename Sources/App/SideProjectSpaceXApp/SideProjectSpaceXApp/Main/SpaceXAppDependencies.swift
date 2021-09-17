@@ -42,7 +42,7 @@ class SpaceXAppDependencies {
     
     public func start() {
         
-        setRootViewController(ViewController(service: apiService))
+        setRootViewController(UpcomingViewController(service: apiService))
 
     }
 }

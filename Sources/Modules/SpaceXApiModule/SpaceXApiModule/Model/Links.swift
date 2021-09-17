@@ -29,14 +29,13 @@ public struct Links: DTO {
 //MARK: Patch
 public struct Patch: DTO {
   
-  var small: String
-  var large: String
+  var small: String?
+  var large: String?
   
   public var description: String {
     return """
                 ------------
-                small = \(small)
-                large = \(large)
+                Patch
                 ------------
                 """
   }
@@ -60,16 +59,15 @@ public struct Flickr: DTO {
 //MARK: Reddit
 public struct Reddit: DTO {
   
-  var campaign: String
-  var launch: String
+  var campaign: String?
+  var launch: String?
   var media: String?
   var recovery: String?
   
   public var description: String {
     return """
                 ------------
-                campaign = \(campaign)
-                launch = \(launch)
+                Reddit
                 ------------
                 """
   }
