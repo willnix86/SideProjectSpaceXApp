@@ -7,6 +7,7 @@
 
 import UIKit
 import SpaceXApiModule
+import NetworkingService
 
 extension Launch {
   var formattedDate: String {
@@ -46,6 +47,10 @@ extension Launch {
 }
 
 class LaunchCell: UITableViewCell {
+  static let identifier = "LaunchCell"
+  var service: SpaceXApiService?
+  var task: HTTPClientTask?
+
   var launch: Launch? {
     didSet {
       launchName.text = launch?.name
@@ -55,9 +60,10 @@ class LaunchCell: UITableViewCell {
       launchDate.text = launch?.formattedDate
       
       if let imageURL = launch?.links.patch.small {
-        DispatchQueue.global().async { [weak self] in
-          if let url = URL(string: imageURL), let data = try? Data(contentsOf: url) {
-            if let image = UIImage(data: data) {
+        if let service = service {
+          task = service.downloadImage(from: imageURL) { [weak self] data in
+            guard self != nil else { return }
+            if let data = data, let image = UIImage(data: data) {
               DispatchQueue.main.async {
                 self?.launchImageView.image = image
               }
@@ -72,13 +78,14 @@ class LaunchCell: UITableViewCell {
     let imageView = UIImageView()
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.isAccessibilityElement = true
+    imageView.image = UIImage(named: "spaceX")
     return imageView
   }()
   
   private let launchName: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .white
+    label.textColor = .label
     label.font = .boldSystemFont(ofSize: 16)
     label.textAlignment = .left
     label.isAccessibilityElement = true
@@ -88,7 +95,7 @@ class LaunchCell: UITableViewCell {
   private let launchDate: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .white
+    label.textColor = .secondaryLabel
     label.font = .systemFont(ofSize: 16)
     label.textAlignment = .left
     label.isAccessibilityElement = true
@@ -98,13 +105,12 @@ class LaunchCell: UITableViewCell {
   private let launchNumber: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.textColor = .white
+    label.textColor = .secondaryLabel
     label.font = .systemFont(ofSize: 16)
     label.textAlignment = .left
     label.isAccessibilityElement = true
     return label
   }()
-  
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -147,7 +153,11 @@ class LaunchCell: UITableViewCell {
     self.launchName.text = nil
     self.launchDate.text = nil
     self.launchNumber.text = nil
-    self.launchImageView.image = nil
+    if task != nil {
+      task?.cancel()
+      task = nil
+    }
+    self.launchImageView.image = UIImage(named: "spaceX")
   }
 
 }

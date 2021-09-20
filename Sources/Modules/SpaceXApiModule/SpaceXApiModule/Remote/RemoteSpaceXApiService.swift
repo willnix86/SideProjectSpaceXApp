@@ -113,4 +113,12 @@ public class RemoteSpaceXApiService: SpaceXApiService {
     return task
   }
   
+  public func downloadImage(from url: String, completion: @escaping (Data?) -> Void) -> HTTPClientTask {
+    let task = client.getData(fromURL: URL(string: url)!) { [weak self] data in
+      guard self != nil else { return }
+      completion(data)
+    }
+    return task
+  }
+  
 }

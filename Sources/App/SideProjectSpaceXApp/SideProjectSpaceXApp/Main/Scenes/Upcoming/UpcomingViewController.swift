@@ -20,7 +20,7 @@ class UpcomingViewController: UIViewController {
     label.text = title
     label.accessibilityLabel = title
     label.isAccessibilityElement = true
-    label.textColor = .white
+    label.textColor = .label
     label.font = .boldSystemFont(ofSize: 26)
     label.adjustsFontForContentSizeCategory = true
     label.translatesAutoresizingMaskIntoConstraints = false
@@ -30,15 +30,15 @@ class UpcomingViewController: UIViewController {
   private var tableView: UITableView = {
     let tableView = UITableView()
     tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.backgroundColor = .black
-    tableView.register(LaunchCell.self, forCellReuseIdentifier: "LaunchCell")
+    tableView.backgroundColor = .systemBackground
+    tableView.register(LaunchCell.self, forCellReuseIdentifier: LaunchCell.identifier)
     tableView.isHidden = true
     return tableView
   }()
   
   private var loadingIndicator: UIActivityIndicatorView = {
     let indictor = UIActivityIndicatorView(style: .large)
-    indictor.color = .white
+    indictor.color = .secondarySystemBackground
     indictor.translatesAutoresizingMaskIntoConstraints = false
     indictor.startAnimating()
     return indictor
@@ -108,21 +108,10 @@ extension UpcomingViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "LaunchCell", for: indexPath) as! LaunchCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: LaunchCell.identifier, for: indexPath) as! LaunchCell
     if let launch: Launch = self.upcomingLaunches?[indexPath.row] {
+      cell.service = service
       cell.launch = launch
-//      if let imageURL = launch.links.patch.small {
-//        DispatchQueue.global().async {
-//          if let data = try? Data(contentsOf: URL(fileURLWithPath: imageURL)) {
-//            if let image = UIImage(data: data) {
-//              DispatchQueue.main.async {
-//                cell.launchImageView.image = image
-//                self.tableView.reloadData()
-//              }
-//            }
-//          }
-//        }
-//      }
     }
     return cell
   }

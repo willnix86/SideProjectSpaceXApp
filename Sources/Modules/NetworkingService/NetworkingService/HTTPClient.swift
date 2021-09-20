@@ -30,7 +30,7 @@ public protocol HTTPClient {
                      timeoutInterval: TimeInterval,
                      completion: @escaping (_ result: HTTPClientResult) -> Void)  -> HTTPClientTask
     
-    func getData(fromURL url: URL, completion: @escaping (_ data: Data?) -> Void)
+    func getData(fromURL url: URL, completion: @escaping (_ data: Data?) -> Void) -> HTTPClientTask
 }
 
 public enum HTTPMethod: String {
