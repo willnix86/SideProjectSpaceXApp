@@ -20,6 +20,7 @@
 		2492F71726A985DE0063D504 /* NetworkingService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2492F71526A985DE0063D504 /* NetworkingService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24A7BF4526F21B3700FAB08A /* SpaceXAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7BF4426F21B3700FAB08A /* SpaceXAppDependencies.swift */; };
 		E683102926F48A9300F5E32C /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E683102826F48A9300F5E32C /* UpcomingViewController.swift */; };
+		E683102D26F4C37900F5E32C /* LaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E683102C26F4C37900F5E32C /* LaunchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2492F71526A985DE0063D504 /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A7BF4426F21B3700FAB08A /* SpaceXAppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceXAppDependencies.swift; sourceTree = "<group>"; };
 		E683102826F48A9300F5E32C /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		E683102C26F4C37900F5E32C /* LaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		24A7BF4126F21A6F00FAB08A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E683102E26F4C38900F5E32C /* Components */,
 				24A7BF4426F21B3700FAB08A /* SpaceXAppDependencies.swift */,
 				24A7BF4226F21A7800FAB08A /* Scenes */,
 			);
@@ -194,6 +197,14 @@
 				E683102826F48A9300F5E32C /* UpcomingViewController.swift */,
 			);
 			path = Upcoming;
+			sourceTree = "<group>";
+		};
+		E683102E26F4C38900F5E32C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E683102C26F4C37900F5E32C /* LaunchCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +339,7 @@
 			files = (
 				246E9F0E26A7529600BB5E47 /* ViewController.swift in Sources */,
 				246E9F0A26A7529600BB5E47 /* AppDelegate.swift in Sources */,
+				E683102D26F4C37900F5E32C /* LaunchCell.swift in Sources */,
 				24A7BF4526F21B3700FAB08A /* SpaceXAppDependencies.swift in Sources */,
 				E683102926F48A9300F5E32C /* UpcomingViewController.swift in Sources */,
 				246E9F0C26A7529600BB5E47 /* SceneDelegate.swift in Sources */,
