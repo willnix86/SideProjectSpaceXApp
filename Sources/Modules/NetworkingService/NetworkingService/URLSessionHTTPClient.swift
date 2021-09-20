@@ -131,7 +131,7 @@ public class URLSessionHTTPClient: HTTPClient {
 
     }
     
-    public func getData(fromURL url: URL, completion: @escaping (Data?) -> Void) {
+    public func getData(fromURL url: URL, completion: @escaping (Data?) -> Void) -> HTTPClientTask {
                 
         let task = session.dataTask(with: url, completionHandler: { (data, response, error) in
             
@@ -140,6 +140,7 @@ public class URLSessionHTTPClient: HTTPClient {
         })
         
         task.resume()
+        return URLSessionTaskWrapper(wrapped: task)
     }
     
 }

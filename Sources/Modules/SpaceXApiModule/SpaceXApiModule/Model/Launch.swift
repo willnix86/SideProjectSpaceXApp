@@ -9,43 +9,43 @@ import NetworkingService
 
 public struct Launch: DTO {
     
-    var id: String
-    var fairings: Fairings?
-    var links: Links
+  public var id: String
+  public var fairings: Fairings?
+  public var links: Links
     
     //Our Decoder is using convertFromSnakeCase decodingStrategy
     //so we can name the variable 'staticFireDateUtc' instead of 'static_fire_date_utc'
-    var staticFireDateUtc: String
+  public var staticFireDateUtc: String?
     
-    var staticFireDateUnix: Int32
-    var tbd: Bool
-    var net: Bool
-    var window: Int
-    var rocket: String
-    var success: Bool
-    var details: String
-    var ships: [String]
-    var crew: [String]
-    var capsules: [String]
-    var payloads: [String]
-    var launchpad: String
-    var autoUpdate: Bool
-    var launchLibraryId: String
-    var flightNumber: Int
-    var name: String
-    var dateUtc: String
-    var dateUnix: Int32
-    var dateLocal: String
-    var datePrecision: String
-    var upcoming: Bool
-    var cores: [Core]
-     
-    public var description: String {
-        return """
-                ------------
-                id = \(id)
-                links = \(links)
-                ------------
-                """
-    }
+  public var staticFireDateUnix: Int32?
+  public var tbd: Bool
+  public var net: Bool
+  public var window: Int?
+  public var rocket: String
+  public var success: Bool?
+  public var details: String?
+  public var ships: [String]
+  public var crew: [String]
+  public var capsules: [String]
+  public var payloads: [String]
+  public var launchpad: String
+  public var autoUpdate: Bool
+  public var launchLibraryId: String?
+  public var flightNumber: Int
+  public var name: String
+  public var dateUtc: String
+  public var dateUnix: Int32
+  public var dateLocal: String
+  public var datePrecision: String
+  public var upcoming: Bool
+  public var cores: [Core]
+   
+  public var description: String {
+      return """
+              ------------
+              id = \(id)
+              links = \(links)
+              ------------
+              """
+  }
 }

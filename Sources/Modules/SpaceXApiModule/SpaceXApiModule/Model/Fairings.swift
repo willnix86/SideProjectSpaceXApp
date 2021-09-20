@@ -9,17 +9,14 @@ import NetworkingService
 
 public struct Fairings: DTO {
   
-  var resued: Bool
-  var recoveryAttempt: Bool
-  var recovered: Bool
+  var resued: Bool?
+  var recoveryAttempt: Bool?
+  var recovered: Bool?
   var ships: [String]
   
   public var description: String {
     return """
               ------------
-                resued = \(resued)
-                recoveryAttempt = \(recoveryAttempt)
-                recovered = \(recovered)
                 ships = \(ships)
               ------------
               """

@@ -42,4 +42,8 @@ public protocol SpaceXApiService {
   
   //GET https://api.spacexdata.com/v4/rockets/$rocketID
   func getRocket(named rocketID: String, completion: @escaping (Swift.Result<Rocket, ServiceError>)->Void) -> HTTPClientTask
+  
+  
+  //Utility function to download images
+  func downloadImage(from url: String, completion: @escaping (Data?)->Void) -> HTTPClientTask
 }

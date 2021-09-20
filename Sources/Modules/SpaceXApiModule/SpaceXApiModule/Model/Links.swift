@@ -8,14 +8,14 @@
 import NetworkingService
 
 public struct Links: DTO {
-  var patch: Patch
-  var reddit: Reddit
-  var flickr: Flickr
-  var presskit: String?
-  var webcast: String?
-  var youtubeID: String?
-  var article: String?
-  var wikipedia: String?
+  public var patch: Patch
+  public var reddit: Reddit
+  public var flickr: Flickr
+  public var presskit: String?
+  public var webcast: String?
+  public var youtubeID: String?
+  public var article: String?
+  public var wikipedia: String?
     
   public var description: String {
     return """
@@ -29,14 +29,13 @@ public struct Links: DTO {
 //MARK: Patch
 public struct Patch: DTO {
   
-  var small: String
-  var large: String
+  public var small: String?
+  public var large: String?
   
   public var description: String {
     return """
                 ------------
-                small = \(small)
-                large = \(large)
+                Patch
                 ------------
                 """
   }
@@ -45,8 +44,8 @@ public struct Patch: DTO {
 //MARK: Flickr
 public struct Flickr: DTO {
   
-  var small: [String]?
-  var original: [String]
+  public var small: [String]?
+  public var original: [String]
   
   public var description: String {
     return """
@@ -60,16 +59,15 @@ public struct Flickr: DTO {
 //MARK: Reddit
 public struct Reddit: DTO {
   
-  var campaign: String
-  var launch: String
-  var media: String?
-  var recovery: String?
+  public var campaign: String?
+  public var launch: String?
+  public var media: String?
+  public var recovery: String?
   
   public var description: String {
     return """
                 ------------
-                campaign = \(campaign)
-                launch = \(launch)
+                Reddit
                 ------------
                 """
   }
