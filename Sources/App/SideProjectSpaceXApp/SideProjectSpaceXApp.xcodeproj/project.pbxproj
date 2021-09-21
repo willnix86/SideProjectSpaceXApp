@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24198F4426B857E300CF6759 /* SpaceXApiModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4326B857E300CF6759 /* SpaceXApiModule.framework */; };
 		24198F4526B857E300CF6759 /* SpaceXApiModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4326B857E300CF6759 /* SpaceXApiModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24301BA426FA2FA7000C2621 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24301BA326FA2FA7000C2621 /* MainTabBarController.swift */; };
 		246E9F0A26A7529600BB5E47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9F0926A7529600BB5E47 /* AppDelegate.swift */; };
 		246E9F0C26A7529600BB5E47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9F0B26A7529600BB5E47 /* SceneDelegate.swift */; };
 		246E9F0E26A7529600BB5E47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246E9F0D26A7529600BB5E47 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		24198F4326B857E300CF6759 /* SpaceXApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceXApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24301BA326FA2FA7000C2621 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		246E9F0626A7529600BB5E47 /* SideProjectSpaceXApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideProjectSpaceXApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E9F0926A7529600BB5E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246E9F0B26A7529600BB5E47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24301BA126FA2F82000C2621 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				24301BA226FA2F8B000C2621 /* UI */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		24301BA226FA2F8B000C2621 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				24301BA326FA2FA7000C2621 /* MainTabBarController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		246E9EFD26A7529600BB5E47 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +185,7 @@
 		24A7BF4126F21A6F00FAB08A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				24301BA126FA2F82000C2621 /* Common */,
 				E683102E26F4C38900F5E32C /* Components */,
 				24A7BF4426F21B3700FAB08A /* SpaceXAppDependencies.swift */,
 				24A7BF4226F21A7800FAB08A /* Scenes */,
@@ -340,6 +359,7 @@
 				246E9F0E26A7529600BB5E47 /* ViewController.swift in Sources */,
 				246E9F0A26A7529600BB5E47 /* AppDelegate.swift in Sources */,
 				E683102D26F4C37900F5E32C /* LaunchCell.swift in Sources */,
+				24301BA426FA2FA7000C2621 /* MainTabBarController.swift in Sources */,
 				24A7BF4526F21B3700FAB08A /* SpaceXAppDependencies.swift in Sources */,
 				E683102926F48A9300F5E32C /* UpcomingViewController.swift in Sources */,
 				246E9F0C26A7529600BB5E47 /* SceneDelegate.swift in Sources */,

@@ -42,7 +42,49 @@ class SpaceXAppDependencies {
     
     public func start() {
         
-        setRootViewController(UpcomingViewController(service: apiService))
+        setRootViewController(makeMainTabBarController())
 
+    }
+}
+
+// MARK: - Tab Bar Controller
+extension SpaceXAppDependencies {
+    private func makeMainTabBarController() -> UIViewController {
+        
+        let homeVC = makeHomeViewController()
+        let upcomingVC = makeUpcomingViewController()
+        let profileVC = makeProfileViewController()
+        
+        let tabController = MainTabBarController(
+            viewControllers: [homeVC, upcomingVC, profileVC])
+        return tabController
+    }
+    
+    private func makeHomeViewController() -> UIViewController {
+        let vc = ViewController(service: apiService)
+        vc.title = "Home"
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.title = "Home"
+        navigationController.tabBarItem.image = UIImage(systemName: "house")
+        return navigationController
+    }
+    
+    private func makeUpcomingViewController() -> UIViewController {
+        let vc = UpcomingViewController(service: apiService)
+        vc.title = "Upcoming"
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.title = "Upcoming"
+        navigationController.tabBarItem.image = UIImage(systemName: "paperplane")
+        return navigationController
+    }
+    
+    private func makeProfileViewController() -> UIViewController {
+        let vc = UIViewController()
+        vc.title = "Company"
+        vc.view.backgroundColor = .systemBackground
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.title = "Company"
+        navigationController.tabBarItem.image = UIImage(systemName: "building.2")
+        return navigationController
     }
 }
