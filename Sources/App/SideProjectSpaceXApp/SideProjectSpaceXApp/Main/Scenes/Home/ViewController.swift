@@ -28,7 +28,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .systemPink
+    view.backgroundColor = .systemBackground
     
     _ = service.getRockets { result in
         switch result {

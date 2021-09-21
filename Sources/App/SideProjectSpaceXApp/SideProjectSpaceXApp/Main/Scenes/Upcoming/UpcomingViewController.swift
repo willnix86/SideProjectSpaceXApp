@@ -71,7 +71,7 @@ class UpcomingViewController: UIViewController {
     })
     
     safeArea = view.layoutMarginsGuide
-    view.backgroundColor = .systemPink
+    view.backgroundColor = .systemBackground
     
     view.addSubview(titleLabel)
     NSLayoutConstraint.activate([
