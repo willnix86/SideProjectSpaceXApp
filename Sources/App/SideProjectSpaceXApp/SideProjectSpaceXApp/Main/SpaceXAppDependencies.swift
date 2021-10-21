@@ -61,7 +61,7 @@ extension SpaceXAppDependencies {
     }
     
     private func makeHomeViewController() -> UIViewController {
-        let vc = ViewController(service: apiService)
+        let vc = HomeViewController(service: apiService)
         vc.title = "Home"
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.title = "Home"
