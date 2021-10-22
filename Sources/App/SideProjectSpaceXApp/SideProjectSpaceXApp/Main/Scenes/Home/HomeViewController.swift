@@ -11,7 +11,7 @@ import SpaceXApiModule
 class HomeViewController: UIViewController {
     
     let viewModel: HomeViewModel
-    var nextLaunch: Launch?
+    var nextLaunchDate: Date?
 
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
