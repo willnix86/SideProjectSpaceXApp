@@ -7,7 +7,7 @@
 
 import NetworkingService
 
-public struct Launch: DTO {
+public struct LaunchDTO: DTO {
     
   public var id: String
   public var fairings: Fairings?

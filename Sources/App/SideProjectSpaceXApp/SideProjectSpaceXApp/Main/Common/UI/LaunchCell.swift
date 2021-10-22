@@ -59,7 +59,7 @@ class LaunchCell: UITableViewCell {
       }
       launchDate.text = launch?.formattedDate
       
-      if let imageURL = launch?.links.patch.small {
+      if let imageURL = launch?.smallPatch {
         if let service = service {
           task = service.downloadImage(from: imageURL) { [weak self] data in
             guard self != nil else { return }

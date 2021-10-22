@@ -6,23 +6,25 @@
 //
 
 import XCTest
-import SpaceXApiModule
 @testable import SideProjectSpaceXApp
 
 class HomeControllerTests: XCTestCase {
     var sut: HomeViewController!
-    var service: SpaceXApiService!
-    
+    var viewModel: HomeViewModel!
+
     override func setUpWithError() throws {
-        service = SpaceXApiServiceMock()
-        sut = HomeViewController(service: service)
+        let service = SpaceXApiServiceMock()
+        viewModel = HomeViewModel(service: service)
+        sut = HomeViewController(viewModel: viewModel)
+        _ = sut.view // ensure viewDidLoad is called
     }
 
     override func tearDownWithError() throws {
         sut = nil
     }
 
-    func testController_initWithService_createsHomeController() {
-        XCTAssertNotNil(sut.service)
+    func testController_initWithViewModel_createsHomeController() {
+        XCTAssertNotNil(sut.viewModel)
     }
+
 }

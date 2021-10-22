@@ -10,14 +10,11 @@ import SpaceXApiModule
 
 class HomeViewController: UIViewController {
     
-    let service: SpaceXApiService
-    
-    private var latestLaunch: Launch?
-    private var ships: [Ship]?
-    private var rockets: [Rocket]?
-    
-    init(service: SpaceXApiService) {
-        self.service = service
+    let viewModel: HomeViewModel
+    var nextLaunch: Launch?
+
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,37 +26,7 @@ class HomeViewController: UIViewController {
     super.viewDidLoad()
     
     view.backgroundColor = .systemBackground
-    
-//    _ = service.getRockets { result in
-//        switch result {
-//        case let .failure(error):
-//            print(error)
-//        case let .success(rockets):
-//            self.rockets = rockets
-//        }
-//    }
-//
-//    _ = service.getLatestLaunch(completion: { result in
-//        switch result {
-//        case .success(let launch):
-//            self.latestLaunch = launch
-//        case .failure(_):
-//            print("Failed to fetch latest launch")
-//        }
-//    })
-//
-//    _ = service.getShips(completion: { result in
-//        switch result {
-//        case .success(let ships):
-//            self.ships = ships
-//        case .failure(_):
-//            print("Failed to fetch ships")
-//        }
-//    })
-    
-    
   }
-
 }
 
 

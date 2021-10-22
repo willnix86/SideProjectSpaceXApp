@@ -7,7 +7,7 @@
 
 import NetworkingService
 
-public struct Ship: DTO {
+public struct ShipDTO: DTO {
   
   var legacyId: String?
   var model: String?

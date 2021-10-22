@@ -59,7 +59,9 @@ class UpcomingViewController: UIViewController {
     _ = service.getUpcomingLaunches(completion: { result in
       switch result {
         case .success(let launches):
-          self.upcomingLaunches = launches
+          self.upcomingLaunches = launches.map {
+              Launch(name: $0.name, flightNumber: $0.flightNumber, dateLocal: $0.dateLocal, datePrecision: $0.datePrecision, smallPatch: $0.links.patch.small)
+          }
           DispatchQueue.main.async {
             self.tableView.reloadData()
             self.loadingIndicator.removeFromSuperview()
