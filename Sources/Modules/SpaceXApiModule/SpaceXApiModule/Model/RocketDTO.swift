@@ -7,7 +7,7 @@
 
 import NetworkingService
 
-public struct Rocket: DTO {
+public struct RocketDTO: DTO {
   
   var id: String
   var active: Bool

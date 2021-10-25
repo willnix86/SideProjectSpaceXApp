@@ -14,9 +14,9 @@
 		24198F4826B8580900CF6759 /* NetworkingService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4726B8580900CF6759 /* NetworkingService.framework */; };
 		24198F4926B8580900CF6759 /* NetworkingService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24198F4726B8580900CF6759 /* NetworkingService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24198F4D26B85BFE00CF6759 /* RemoteSpaceXApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F4C26B85BFE00CF6759 /* RemoteSpaceXApiService.swift */; };
-		24198F5026B8698000CF6759 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F4F26B8698000CF6759 /* Launch.swift */; };
-		E64964D526E0DBEE00635A94 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D426E0DBEE00635A94 /* Ship.swift */; };
-		E64964D726E0DEB100635A94 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D626E0DEB100635A94 /* Rocket.swift */; };
+		24198F5026B8698000CF6759 /* LaunchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24198F4F26B8698000CF6759 /* LaunchDTO.swift */; };
+		E64964D526E0DBEE00635A94 /* ShipDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D426E0DBEE00635A94 /* ShipDTO.swift */; };
+		E64964D726E0DEB100635A94 /* RocketDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D626E0DEB100635A94 /* RocketDTO.swift */; };
 		E64964D926E0E5D200635A94 /* Fairings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964D826E0E5D200635A94 /* Fairings.swift */; };
 		E64964DB26E0E5DB00635A94 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964DA26E0E5DB00635A94 /* Core.swift */; };
 		E64964DD26E0E6F500635A94 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64964DC26E0E6F500635A94 /* Links.swift */; };
@@ -30,26 +30,19 @@
 			remoteGlobalIDString = 24198F2626B8535400CF6759;
 			remoteInfo = SpaceXApiModule;
 		};
-		2490B0152706609700F2AF3A /* PBXContainerItemProxy */ = {
+		E69D0FD62721931900942589 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2490B0102706609700F2AF3A /* NetworkingService.xcodeproj */;
+			containerPortal = E69D0FD12721931900942589 /* NetworkingService.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 24C8D9D12632DE2E00887D44;
 			remoteInfo = NetworkingService;
 		};
-		2490B0172706609700F2AF3A /* PBXContainerItemProxy */ = {
+		E69D0FD82721931900942589 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2490B0102706609700F2AF3A /* NetworkingService.xcodeproj */;
+			containerPortal = E69D0FD12721931900942589 /* NetworkingService.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 24C8D9DA2632DE2E00887D44;
 			remoteInfo = NetworkingServiceTests;
-		};
-		2490B019270660A900F2AF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2490B0102706609700F2AF3A /* NetworkingService.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 24C8D9D02632DE2E00887D44;
-			remoteInfo = NetworkingService;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -77,13 +70,13 @@
 		24198F4126B8575400CF6759 /* SpaceXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXApiService.swift; sourceTree = "<group>"; };
 		24198F4726B8580900CF6759 /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24198F4C26B85BFE00CF6759 /* RemoteSpaceXApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSpaceXApiService.swift; sourceTree = "<group>"; };
-		24198F4F26B8698000CF6759 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
-		2490B0102706609700F2AF3A /* NetworkingService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkingService.xcodeproj; path = ../../NetworkingService/NetworkingService.xcodeproj; sourceTree = "<group>"; };
-		E64964D426E0DBEE00635A94 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
-		E64964D626E0DEB100635A94 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		24198F4F26B8698000CF6759 /* LaunchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDTO.swift; sourceTree = "<group>"; };
+		E64964D426E0DBEE00635A94 /* ShipDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipDTO.swift; sourceTree = "<group>"; };
+		E64964D626E0DEB100635A94 /* RocketDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDTO.swift; sourceTree = "<group>"; };
 		E64964D826E0E5D200635A94 /* Fairings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fairings.swift; sourceTree = "<group>"; };
 		E64964DA26E0E5DB00635A94 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		E64964DC26E0E6F500635A94 /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		E69D0FD12721931900942589 /* NetworkingService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkingService.xcodeproj; path = ../../NetworkingService/NetworkingService.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +102,7 @@
 		24198F1D26B8535400CF6759 = {
 			isa = PBXGroup;
 			children = (
-				2490B00F2706607100F2AF3A /* Modules */,
+				E69D0FD02721930E00942589 /* Modules */,
 				24198F2926B8535400CF6759 /* SpaceXApiModule */,
 				24198F3426B8535500CF6759 /* SpaceXApiModuleTests */,
 				24198F2826B8535400CF6759 /* Products */,
@@ -166,9 +159,9 @@
 		24198F4E26B867FC00CF6759 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				24198F4F26B8698000CF6759 /* Launch.swift */,
-				E64964D426E0DBEE00635A94 /* Ship.swift */,
-				E64964D626E0DEB100635A94 /* Rocket.swift */,
+				24198F4F26B8698000CF6759 /* LaunchDTO.swift */,
+				E64964D426E0DBEE00635A94 /* ShipDTO.swift */,
+				E64964D626E0DEB100635A94 /* RocketDTO.swift */,
 				E64964D826E0E5D200635A94 /* Fairings.swift */,
 				E64964DA26E0E5DB00635A94 /* Core.swift */,
 				E64964DC26E0E6F500635A94 /* Links.swift */,
@@ -176,19 +169,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2490B00F2706607100F2AF3A /* Modules */ = {
+		E69D0FD02721930E00942589 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2490B0102706609700F2AF3A /* NetworkingService.xcodeproj */,
+				E69D0FD12721931900942589 /* NetworkingService.xcodeproj */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		2490B0112706609700F2AF3A /* Products */ = {
+		E69D0FD22721931900942589 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2490B0162706609700F2AF3A /* NetworkingService.framework */,
-				2490B0182706609700F2AF3A /* NetworkingServiceTests.xctest */,
+				E69D0FD72721931900942589 /* NetworkingService.framework */,
+				E69D0FD92721931900942589 /* NetworkingServiceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,7 +213,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2490B01A270660A900F2AF3A /* PBXTargetDependency */,
 			);
 			name = SpaceXApiModule;
 			productName = SpaceXApiModule;
@@ -276,8 +268,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2490B0112706609700F2AF3A /* Products */;
-					ProjectRef = 2490B0102706609700F2AF3A /* NetworkingService.xcodeproj */;
+					ProductGroup = E69D0FD22721931900942589 /* Products */;
+					ProjectRef = E69D0FD12721931900942589 /* NetworkingService.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -289,18 +281,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2490B0162706609700F2AF3A /* NetworkingService.framework */ = {
+		E69D0FD72721931900942589 /* NetworkingService.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = NetworkingService.framework;
-			remoteRef = 2490B0152706609700F2AF3A /* PBXContainerItemProxy */;
+			remoteRef = E69D0FD62721931900942589 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2490B0182706609700F2AF3A /* NetworkingServiceTests.xctest */ = {
+		E69D0FD92721931900942589 /* NetworkingServiceTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = NetworkingServiceTests.xctest;
-			remoteRef = 2490B0172706609700F2AF3A /* PBXContainerItemProxy */;
+			remoteRef = E69D0FD82721931900942589 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -328,12 +320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24198F4D26B85BFE00CF6759 /* RemoteSpaceXApiService.swift in Sources */,
-				24198F5026B8698000CF6759 /* Launch.swift in Sources */,
+				24198F5026B8698000CF6759 /* LaunchDTO.swift in Sources */,
 				E64964D926E0E5D200635A94 /* Fairings.swift in Sources */,
 				E64964DB26E0E5DB00635A94 /* Core.swift in Sources */,
 				24198F4226B8575400CF6759 /* SpaceXApiService.swift in Sources */,
-				E64964D526E0DBEE00635A94 /* Ship.swift in Sources */,
-				E64964D726E0DEB100635A94 /* Rocket.swift in Sources */,
+				E64964D526E0DBEE00635A94 /* ShipDTO.swift in Sources */,
+				E64964D726E0DEB100635A94 /* RocketDTO.swift in Sources */,
 				E64964DD26E0E6F500635A94 /* Links.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,11 +345,6 @@
 			isa = PBXTargetDependency;
 			target = 24198F2626B8535400CF6759 /* SpaceXApiModule */;
 			targetProxy = 24198F3226B8535500CF6759 /* PBXContainerItemProxy */;
-		};
-		2490B01A270660A900F2AF3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NetworkingService;
-			targetProxy = 2490B019270660A900F2AF3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
