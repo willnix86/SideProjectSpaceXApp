@@ -38,6 +38,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		24297E84272733FC00D09110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24297E7E272733FC00D09110 /* SpaceXApiModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24198F2726B8535400CF6759;
+			remoteInfo = SpaceXApiModule;
+		};
+		24297E86272733FC00D09110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24297E7E272733FC00D09110 /* SpaceXApiModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24198F3026B8535500CF6759;
+			remoteInfo = SpaceXApiModuleTests;
+		};
+		24297E99272734B800D09110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24297E7E272733FC00D09110 /* SpaceXApiModule.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 24198F2626B8535400CF6759;
+			remoteInfo = SpaceXApiModule;
+		};
 		246E9F1D26A7529A00BB5E47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 246E9EFE26A7529600BB5E47 /* Project object */;
@@ -51,27 +72,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 246E9F0526A7529600BB5E47;
 			remoteInfo = SideProjectSpaceXApp;
-		};
-		2490B0072706602400F2AF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2490B0022706602400F2AF3A /* SpaceXApiModule.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 24198F2726B8535400CF6759;
-			remoteInfo = SpaceXApiModule;
-		};
-		2490B0092706602400F2AF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2490B0022706602400F2AF3A /* SpaceXApiModule.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 24198F3026B8535500CF6759;
-			remoteInfo = SpaceXApiModuleTests;
-		};
-		2490B00D2706603100F2AF3A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2490B0022706602400F2AF3A /* SpaceXApiModule.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 24198F2626B8535400CF6759;
-			remoteInfo = SpaceXApiModule;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -92,6 +92,7 @@
 
 /* Begin PBXFileReference section */
 		24198F4326B857E300CF6759 /* SpaceXApiModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SpaceXApiModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24297E7E272733FC00D09110 /* SpaceXApiModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpaceXApiModule.xcodeproj; path = ../../Modules/SpaceXApiModule/SpaceXApiModule.xcodeproj; sourceTree = "<group>"; };
 		24301BA326FA2FA7000C2621 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		246E9F0626A7529600BB5E47 /* SideProjectSpaceXApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideProjectSpaceXApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E9F0926A7529600BB5E47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		246E9F2726A7529A00BB5E47 /* SideProjectSpaceXAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideProjectSpaceXAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246E9F2B26A7529A00BB5E47 /* SideProjectSpaceXAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideProjectSpaceXAppUITests.swift; sourceTree = "<group>"; };
 		246E9F2D26A7529A00BB5E47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2490B0022706602400F2AF3A /* SpaceXApiModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpaceXApiModule.xcodeproj; path = ../../../Modules/SpaceXApiModule/SpaceXApiModule.xcodeproj; sourceTree = "<group>"; };
 		2492F71526A985DE0063D504 /* NetworkingService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkingService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A7BF4426F21B3700FAB08A /* SpaceXAppDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceXAppDependencies.swift; sourceTree = "<group>"; };
 		E66379C32721EDB100052134 /* nextLaunch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nextLaunch.json; sourceTree = "<group>"; };
@@ -153,6 +153,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24297E7D272733D700D09110 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				24297E7E272733FC00D09110 /* SpaceXApiModule.xcodeproj */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		24297E7F272733FC00D09110 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24297E85272733FC00D09110 /* SpaceXApiModule.framework */,
+				24297E87272733FC00D09110 /* SpaceXApiModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		24301BA126FA2F82000C2621 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +190,7 @@
 		246E9EFD26A7529600BB5E47 = {
 			isa = PBXGroup;
 			children = (
-				2490AFF82706600500F2AF3A /* Modules */,
+				24297E7D272733D700D09110 /* Modules */,
 				246E9F0826A7529600BB5E47 /* SideProjectSpaceXApp */,
 				246E9F1F26A7529A00BB5E47 /* SideProjectSpaceXAppTests */,
 				246E9F2A26A7529A00BB5E47 /* SideProjectSpaceXAppUITests */,
@@ -222,23 +239,6 @@
 				246E9F2D26A7529A00BB5E47 /* Info.plist */,
 			);
 			path = SideProjectSpaceXAppUITests;
-			sourceTree = "<group>";
-		};
-		2490AFF82706600500F2AF3A /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				2490B0022706602400F2AF3A /* SpaceXApiModule.xcodeproj */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		2490B0032706602400F2AF3A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2490B0082706602400F2AF3A /* SpaceXApiModule.framework */,
-				2490B00A2706602400F2AF3A /* SpaceXApiModuleTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		2492F71426A985DE0063D504 /* Frameworks */ = {
@@ -352,7 +352,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2490B00E2706603100F2AF3A /* PBXTargetDependency */,
+				24297E9A272734B800D09110 /* PBXTargetDependency */,
 			);
 			name = SideProjectSpaceXApp;
 			productName = SideProjectSpaceXApp;
@@ -430,8 +430,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2490B0032706602400F2AF3A /* Products */;
-					ProjectRef = 2490B0022706602400F2AF3A /* SpaceXApiModule.xcodeproj */;
+					ProductGroup = 24297E7F272733FC00D09110 /* Products */;
+					ProjectRef = 24297E7E272733FC00D09110 /* SpaceXApiModule.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -444,18 +444,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2490B0082706602400F2AF3A /* SpaceXApiModule.framework */ = {
+		24297E85272733FC00D09110 /* SpaceXApiModule.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SpaceXApiModule.framework;
-			remoteRef = 2490B0072706602400F2AF3A /* PBXContainerItemProxy */;
+			remoteRef = 24297E84272733FC00D09110 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2490B00A2706602400F2AF3A /* SpaceXApiModuleTests.xctest */ = {
+		24297E87272733FC00D09110 /* SpaceXApiModuleTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = SpaceXApiModuleTests.xctest;
-			remoteRef = 2490B0092706602400F2AF3A /* PBXContainerItemProxy */;
+			remoteRef = 24297E86272733FC00D09110 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -533,6 +533,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		24297E9A272734B800D09110 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpaceXApiModule;
+			targetProxy = 24297E99272734B800D09110 /* PBXContainerItemProxy */;
+		};
 		246E9F1E26A7529A00BB5E47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 246E9F0526A7529600BB5E47 /* SideProjectSpaceXApp */;
@@ -542,11 +547,6 @@
 			isa = PBXTargetDependency;
 			target = 246E9F0526A7529600BB5E47 /* SideProjectSpaceXApp */;
 			targetProxy = 246E9F2826A7529A00BB5E47 /* PBXContainerItemProxy */;
-		};
-		2490B00E2706603100F2AF3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SpaceXApiModule;
-			targetProxy = 2490B00D2706603100F2AF3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
