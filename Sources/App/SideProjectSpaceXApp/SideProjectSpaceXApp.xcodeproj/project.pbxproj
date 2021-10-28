@@ -35,6 +35,7 @@
 		E6EDEEDE2721B18400DB11D5 /* singleRocket.json in Resources */ = {isa = PBXBuildFile; fileRef = E6EDEED82721B18400DB11D5 /* singleRocket.json */; };
 		E6EDEEDF2721B18400DB11D5 /* singleShip.json in Resources */ = {isa = PBXBuildFile; fileRef = E6EDEED92721B18400DB11D5 /* singleShip.json */; };
 		E6EDEEE12721B1ED00DB11D5 /* multipleRockets.json in Resources */ = {isa = PBXBuildFile; fileRef = E6EDEEE02721B1ED00DB11D5 /* multipleRockets.json */; };
+		E6F8AB5F272834F40039CB81 /* HeroImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8AB5E272834F40039CB81 /* HeroImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		E6EDEED82721B18400DB11D5 /* singleRocket.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleRocket.json; sourceTree = "<group>"; };
 		E6EDEED92721B18400DB11D5 /* singleShip.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = singleShip.json; sourceTree = "<group>"; };
 		E6EDEEE02721B1ED00DB11D5 /* multipleRockets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = multipleRockets.json; sourceTree = "<group>"; };
+		E6F8AB5E272834F40039CB81 /* HeroImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			children = (
 				24301BA326FA2FA7000C2621 /* MainTabBarController.swift */,
 				E683102C26F4C37900F5E32C /* LaunchCell.swift */,
+				E6F8AB5E272834F40039CB81 /* HeroImageCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				E683102D26F4C37900F5E32C /* LaunchCell.swift in Sources */,
 				24301BA426FA2FA7000C2621 /* MainTabBarController.swift in Sources */,
 				24A7BF4526F21B3700FAB08A /* SpaceXAppDependencies.swift in Sources */,
+				E6F8AB5F272834F40039CB81 /* HeroImageCell.swift in Sources */,
 				E683102926F48A9300F5E32C /* UpcomingViewController.swift in Sources */,
 				246E9F0C26A7529600BB5E47 /* SceneDelegate.swift in Sources */,
 			);
